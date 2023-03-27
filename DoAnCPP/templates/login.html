@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Thư Viện HUBT</title>
+  <style>
+  @import url("https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap");
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --color-1: #ee7344; /* Info Container */
+  --color-2: #fcb900; /* Form */
+  --color-3: #fff; /* Button */
+  --color-4: #0575cc; /* Footer Link */
+}
+
+body {
+  font-family: Montserrat, sans-serif;
+  background: #1e1f22;
+}
+
+.wrapper {
+  max-width: 860px;
+  min-width: 300px;
+  margin: 0 auto;
+}
+
+footer {
+  margin-top: 20px;
+  font-size: 14px;
+  padding: 10px 20px;
+}
+
+footer a {
+  text-decoration: none;
+  color: var(--color-4);
+}
+
+section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: calc(100vh - 80px);
+  padding: 0 20px;
+}
+
+.row {
+  display: flex;
+  align-items: center;
+  padding: 0 30px;
+  width: 100%;
+  height: 260px;
+  background-color: var(--color-1);
+  box-shadow: 6px 0 15px rgba(0, 0, 0, 0.4);
+}
+
+.col {
+  flex: 1;
+}
+
+#col-1 {
+  height: 140%;
+  background-color: var(--color-2);
+  box-shadow: 4px 0 10px rgba(0, 0, 0, 0.4);
+  z-index: 10;
+}
+
+.form {
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  gap: 30px;
+  justify-content: center;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+form a {
+  color: black;
+}
+
+input {
+  background-color: var(--color-2);
+  border: 2px solid black;
+  border-radius: 3px;
+  line-height: 2;
+  padding: 4px 8px;
+  font-weight: bold;
+  font-size: 16px;
+  box-shadow: 0.3rem 0.3rem #111827;
+}
+
+input:focus {
+  outline: 1px solid transparent;
+  transform: scale(1.005);
+}
+
+input::placeholder {
+  color: black;
+  font-weight: bold;
+}
+
+input[type="email"],
+input[type="password"] {
+  width: 100%;
+}
+
+input[type="submit"] {
+  background-color: var(--color-3);
+  align-self: flex-end;
+  cursor: pointer;
+  transition-duration: 0.1s;
+  border: 2px solid black;
+  padding: 1px 21px;
+}
+
+input[type="submit"]:active,
+button:active {
+  transform: scale(1.03);
+}
+
+label {
+  position: relative;
+}
+
+label span {
+  transition-duration: 0.2s;
+}
+
+label:focus-within span,
+.focus-span {
+  transform: translate(0.25rem, -72%) scale(0.8);
+  background-color: var(--color-2);
+}
+
+label span {
+  font-weight: bold;
+  position: absolute;
+  left: 4px;
+  top: 8px;
+  padding: 4px 8px;
+}
+
+.info {
+  padding: 10px 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+#sign-up {
+  align-items: flex-start;
+}
+
+button {
+  padding: 8px 42px;
+  background-color: var(--color-3);
+  margin-top: 15px;
+  box-shadow: 0.3rem 0.3rem #111827;
+  cursor: pointer;
+  font-weight: bold;
+  border-radius: 3px;
+  border: 2px solid #111827;
+  transition-duration: 0.1s;
+  font-size: 16px;
+}
+
+.display-none {
+  display: none;
+}
+
+.display-flex {
+  display: flex;
+}
+
+.order {
+  order: 1;
+}
+
+@keyframes bounceLeft {
+  0% {
+    transform: translateX(-400px);
+  }
+  90% {
+    transform: translateX(10px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes bounceRight {
+  0% {
+    transform: translateX(400px);
+  }
+  90% {
+    transform: translateX(-10px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.bounce-left {
+  animation: bounceLeft 1s forwards;
+}
+
+.bounce-right {
+  animation: bounceRight 1s forwards;
+}
+
+.codepen-footer {
+  font-family: "Patrick Hand", cursive;
+  font-size: 17px;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 99;
+  background-color: #232323;
+  color: white;
+  text-align: center;
+  height: 38px;
+  font-size: 21px;
+  display: flex;
+  justify-content: space-between;
+  padding: 6px 20px;
+}
+
+.codepen-footer a {
+  color: #ee7344;
+  text-decoration: none;
+}
+</style>
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<div class="wrapper">
+  <main>
+    <section>
+      <div class="row">
+        <div id="col-1" class="col">
+          <div id="sign-up-form" class="form">
+            <h1>Đăng Nhập</h1>
+            <form onsubmit="return false;">
+              <label for="MSV">
+                <input id="MSV" name="MSV" type="email" placeholder="" autocomplete="off">
+                <span id="span-MSV">Mã Sinh Viên</span>
+              </label>
+              <label for="CCCD">
+                <input id="CCCD" name="CCCD" type="password" placeholder="">
+                <span id="span-CCCD">Số Căn Cước</span>
+              </label>
+              <input type="submit" value="Đăng Nhập" onclick="return SVL();">
+            </form>
+          </div>
+          <div id="login-form" class="form display-none">
+            <h1>Đăng Nhập</h1>
+            <form onsubmit="return false;">
+              <label for="IDQT">
+                <input id="IDQT" name="IDQT" type="email" placeholder="" autocomplete="off">
+                <span id="span-IDQT">ID Quản Trị</span>
+              </label>
+              <label for="MAQT">
+                <input id="MAQT" name="MAQT" type="password" placeholder="">
+                <span id="span-MAQT">Mã Quản Trị</span>
+              </label>
+              <input type="submit" value="Đăng Nhập" onclick="return QTVL();">
+            </form>
+          </div>
+        </div>
+        <div id="col-2" class="col">
+          <div id="login" class="info">
+            <h2>Là Quản Trị Viên?</h2>
+            <button onclick="formChange('login')">Đăng Nhập</button>
+          </div>
+          <div id="sign-up" class="info display-none">
+            <h2>Là Sinh Viên?</h2>
+            <button onclick="formChange('signup')">Đăng Nhập</button>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+</div>
+
+<div class="codepen-footer">
+  <small>Đăng Nhập Thư Viện HUBT</small>
+  <small><a href="https://hubt.edu.vn/" target="_top">hubt.edu.vn</a></small>
+</div>
+<!-- partial -->
+  <script  type=text/javascript>
+  function formChange(button) {
+  const signUpForm = document.getElementById("sign-up-form");
+  signUpForm.classList.toggle("display-none");
+
+  const login = document.getElementById("login");
+  login.classList.toggle("display-none");
+
+  const signUp = document.getElementById("sign-up");
+  signUp.classList.toggle("display-flex");
+
+  const loginForm = document.getElementById("login-form");
+  loginForm.classList.toggle("display-flex");
+
+  const col1 = document.getElementById("col-1");
+  const col2 = document.getElementById("col-2");
+  col1.classList.toggle("order");
+
+  if (button === "login") {
+    col1.classList.add("bounce-left");
+    col1.classList.remove("bounce-right");
+
+    col2.classList.add("bounce-right");
+    col2.classList.remove("bounce-left");
+  } else {
+    col1.classList.add("bounce-right");
+    col1.classList.remove("bounce-left");
+
+    col2.classList.add("bounce-left");
+    col2.classList.remove("bounce-right");
+  }
+}
+
+const email1 = document.getElementById("MSV");
+const emailSpan1 = document.getElementById("span-MSV");
+const email2 = document.getElementById("IDQT");
+const emailSpan2 = document.getElementById("span-IDQT");
+const password1 = document.getElementById("CCCD");
+const passwordSpan1 = document.getElementById("span-CCCD");
+const password2 = document.getElementById("MAQT");
+const passwordSpan2 = document.getElementById("span-MAQT");
+
+email1.addEventListener("input", () => {
+  if (email1.value) {
+    emailSpan1.classList.add("focus-span");
+  } else {
+    emailSpan1.classList.remove("focus-span");
+  }
+});
+
+email2.addEventListener("input", () => {
+  if (email2.value) {
+    emailSpan2.classList.add("focus-span");
+  } else {
+    emailSpan2.classList.remove("focus-span");
+  }
+});
+
+password1.addEventListener("input", () => {
+  if (password1.value) {
+    passwordSpan1.classList.add("focus-span");
+  } else {
+    passwordSpan1.classList.remove("focus-span");
+  }
+});
+
+password2.addEventListener("input", () => {
+  if (password2.value) {
+    passwordSpan2.classList.add("focus-span");
+  } else {
+    passwordSpan2.classList.remove("focus-span");
+  }
+});
+</script>
+  <script type=text/javascript>
+  function SVL() {
+  var msvInput = document.getElementById("MSV");
+  var msvValue = msvInput.value;
+
+  var cccdInput = document.getElementById("CCCD");
+  var cccdValue = cccdInput.value;
+
+  var path = "./thuvien/" + msvValue + "/" + cccdValue;
+
+  window.location.href = path;
+}
+  </script>
+  <script type=text/javascript>
+  function QTVL() {
+  var idqtInput = document.getElementById("IDQT");
+  var idqtValue = idqtInput.value;
+
+  var maqtInput = document.getElementById("MAQT");
+  var maqtValue = maqtInput.value;
+
+  var path = "./quanly/" + idqtValue + "/" + maqtValue + "/sach";
+
+  window.location.href = path;
+}
+  </script>
+</body>
+</html>

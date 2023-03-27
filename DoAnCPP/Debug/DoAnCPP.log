@@ -1,0 +1,59 @@
+﻿  DoAnCPP.cpp
+  Please define _WIN32_WINNT or _WIN32_WINDOWS appropriately. For example:
+  - add -D_WIN32_WINNT=0x0601 to the compiler command line; or
+  - add _WIN32_WINNT=0x0601 to your project's Preprocessor Definitions.
+  Assuming _WIN32_WINNT=0x0601 (i.e. Windows 7 target).
+C:\Users\Gigabyte\Source\Repos\DoAnCPP\ThuVien\crow_all.h(10482): warning C4267: 'argument': conversion from 'size_t' to 'uint16_t', possible loss of data
+C:\Users\Gigabyte\Source\Repos\DoAnCPP\ThuVien\crow_all.h(11579,68): warning C4244: 'argument': conversion from 'std::streamsize' to 'size_t', possible loss of data
+C:\Users\Gigabyte\Source\Repos\DoAnCPP\ThuVien\crow_all.h(11567,1): message : while compiling class template member function 'void crow::Connection<Adaptor,Handler>::do_write_static(void)'
+          with
+          [
+              Adaptor=crow::SocketAdaptor,
+              Handler=crow::Crow<>
+          ]
+C:\Users\Gigabyte\Source\Repos\DoAnCPP\ThuVien\crow_all.h(11444,32): message : see reference to function template instantiation 'void crow::Connection<Adaptor,Handler>::do_write_static(void)' being compiled
+          with
+          [
+              Adaptor=crow::SocketAdaptor,
+              Handler=crow::Crow<>
+          ]
+C:\Users\Gigabyte\Source\Repos\DoAnCPP\ThuVien\crow_all.h(12025): message : see reference to class template instantiation 'crow::Connection<Adaptor,Handler>' being compiled
+          with
+          [
+              Adaptor=crow::SocketAdaptor,
+              Handler=crow::Crow<>
+          ]
+C:\Users\Gigabyte\Source\Repos\DoAnCPP\ThuVien\crow_all.h(12025,1): message : while compiling class template member function 'void crow::Server<crow::Crow<>,crow::SocketAdaptor>::do_accept(void)'
+C:\Users\Gigabyte\Source\Repos\DoAnCPP\ThuVien\crow_all.h(11982,22): message : see reference to function template instantiation 'void crow::Server<crow::Crow<>,crow::SocketAdaptor>::do_accept(void)' being compiled
+C:\Users\Gigabyte\Source\Repos\DoAnCPP\ThuVien\crow_all.h(12393,1): message : see reference to class template instantiation 'crow::Server<crow::Crow<>,crow::SocketAdaptor>' being compiled
+C:\Users\Gigabyte\Source\Repos\DoAnCPP\ThuVien\crow_all.h(12372,1): message : while compiling class template member function 'void crow::Crow<>::run(void)'
+C:\Users\Gigabyte\Source\Repos\DoAnCPP\DoAnCPP\DoAnCPP.cpp(511,37): message : see reference to function template instantiation 'void crow::Crow<>::run(void)' being compiled
+C:\Users\Gigabyte\Source\Repos\DoAnCPP\DoAnCPP\DoAnCPP.cpp(36,21): message : see reference to class template instantiation 'crow::Crow<>' being compiled
+C:\Users\Gigabyte\Source\Repos\DoAnCPP\ThuVien\crow_all.h(3574,107): warning C4244: 'argument': conversion from '_Ty1' to 'int', possible loss of data
+          with
+          [
+              _Ty1=std::chrono::system_clock::rep
+          ]
+C:\Users\Gigabyte\Source\Repos\DoAnCPP\ThuVien\crow_all.h(9846): message : see reference to function template instantiation 'void crow::detail::wrapped_handler_call<main::<lambda_3>,_Ty,_Ty,_Ty,__int64>(crow::request &,crow::response &,const F &,_Ty &&,_Ty &&,_Ty &&,__int64 &&)' being compiled
+          with
+          [
+              _Ty=std::basic_string<char,std::char_traits<char>,std::allocator<char>>,
+              F=main::<lambda_3>
+          ]
+C:\Users\Gigabyte\Source\Repos\DoAnCPP\DoAnCPP\DoAnCPP.cpp(142,14): message : see reference to function template instantiation 'void crow::TaggedRule<crow::black_magic::single_tag_to_type<4>::type,crow::black_magic::single_tag_to_type<4>::type,crow::black_magic::single_tag_to_type<4>::type,crow::black_magic::single_tag_to_type<1>::type>::operator ()<main::<lambda_3>>(Func &&)' being compiled
+          with
+          [
+              Func=main::<lambda_3>
+          ]
+C:\Users\Gigabyte\Source\Repos\DoAnCPP\DoAnCPP\DoAnCPP.cpp(85,9): message : see reference to function template instantiation 'void crow::TaggedRule<crow::black_magic::single_tag_to_type<4>::type,crow::black_magic::single_tag_to_type<4>::type,crow::black_magic::single_tag_to_type<4>::type,crow::black_magic::single_tag_to_type<1>::type>::operator ()<main::<lambda_3>>(Func &&)' being compiled
+          with
+          [
+              Func=main::<lambda_3>
+          ]
+C:\Users\Gigabyte\Source\Repos\DoAnCPP\ThuVien\crow_all.h(3577,59): warning C4244: 'argument': conversion from '_Ty' to 'int', possible loss of data
+          with
+          [
+              _Ty=crow::black_magic::single_tag_to_type<1>::type
+          ]
+C:\Users\Gigabyte\Source\Repos\DoAnCPP\DoAnCPP\DoAnCPP.cpp(508): warning C4715: '`main'::`2'::<lambda_12>::operator()': not all control paths return a value
+  DoAnCPP.vcxproj -> C:\Users\Gigabyte\Source\Repos\DoAnCPP\Debug\DoAnCPP.exe

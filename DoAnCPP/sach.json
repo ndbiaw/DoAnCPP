@@ -1,0 +1,32 @@
+[
+    {
+        "IDsach": 1,
+        "SoLuong": 100,
+        "TenSach": "Giáo trình C++"
+    },
+    {
+        "IDsach": 2,
+        "SoLuong": 100,
+        "TenSach": "Giáo trình Visual Basic"
+    },
+    {
+        "IDsach": 3,
+        "SoLuong": 100,
+        "TenSach": "Giáo trình Java"
+    },
+    {
+        "IDsach": 4,
+        "SoLuong": 100,
+        "TenSach": "Bí Kíp Làm Giàu"
+    },
+    {
+        "IDsach": 5,
+        "SoLuong": 100,
+        "TenSach": "Bí Kíp Tán Gái"
+    },
+    {
+        "IDsach": 6,
+        "SoLuong": 99,
+        "TenSach": "Bí Kíp Scam"
+    }
+]

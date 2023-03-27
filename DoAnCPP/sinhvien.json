@@ -1,0 +1,27 @@
+[
+    {
+        "CCCD": "QuanTriVien",
+        "MaSV": "QuanTriVienLogin",
+        "Ten": "Quản Trị Viên"
+    },
+    {
+        "CCCD": "001204001",
+        "MaSV": "27222001",
+        "Ten": "Nguyễn Văn A"
+    },
+    {
+        "CCCD": "001204002",
+        "MaSV": "27222002",
+        "Ten": "Nguyễn Thị B"
+    },
+    {
+        "CCCD": "001204003",
+        "MaSV": "27222003",
+        "Ten": "A B C"
+    },
+    {
+        "CCCD": "001204004",
+        "MaSV": "27222004",
+        "Ten": "Tên Sinh Viên"
+    }
+]
